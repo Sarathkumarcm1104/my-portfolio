@@ -12,7 +12,7 @@ export const profile = {
   hobbies: ["Playing mobile games", "Cricket", "Watching movies"],
   objective: "Seeking a rewarding career as a software engineer in a reputed company where I can apply my knowledge and skills to fulfil organizational goals.",
   education: [
-    { degree: "MCA", institution: "Alagappa University", year: "2023", percentage: "82-84%" },
+    { degree: "MCA", institution: "Alagappa University", year: "2023", percentage: "82-84%", cgpa: "7.8 (converted from percentage using standard formula)" },
     { degree: "BSC Computer Science", institution: "Yadava College Madurai, Tamil Nadu", year: "2021", cgpa: "7.2" },
     { degree: "HSC", institution: "Christhuraja Metric Higher Secondary School, Tirunelveli", year: "2018", percentage: "60%" },
     { degree: "SSC", institution: "Magdalene Metric Higher Secondary School, Tirunelveli", year: "2016", percentage: "80%" }

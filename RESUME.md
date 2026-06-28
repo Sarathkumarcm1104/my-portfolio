@@ -51,7 +51,7 @@ Flight engagement platform for pilots and aviation enthusiasts. Features include
 ## Education
 
 **MCA — Master of Computer Applications**
-Alagappa University · 2023 · Percentage: 82–84%
+Alagappa University · 2023 · CGPA: 7.8 (converted from 82-84% using standard formula)
 
 **B.Sc. Computer Science**
 Yadava College, Madurai · 2021 · CGPA: 7.2
