@@ -1,0 +1,202 @@
+.github-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.04) 50%, transparent 100%);
+  position: relative;
+}
+
+.github-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* --- States: loading / error --------------------------------- */
+.github-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xl);
+  background: var(--background-color);
+  border: 1px solid var(--surface-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.github-state-error i {
+  font-size: 2rem;
+  color: #f59e0b;
+}
+
+.github-state-error p {
+  margin: 0;
+  max-width: 480px;
+}
+
+.github-retry {
+  margin-top: var(--spacing-sm);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.github-retry:hover {
+  text-decoration: underline;
+}
+
+.github-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--surface-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: github-spin 0.8s linear infinite;
+}
+
+@keyframes github-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Grid ---------------------------------------------------- */
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.github-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md);
+  background: var(--background-color);
+  border: 1px solid var(--surface-color);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: transform var(--transition-fast), border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  min-height: 180px;
+}
+
+.github-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+}
+
+.github-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.github-card-header i {
+  font-size: 1.1rem;
+}
+
+.github-card-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.github-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex: 1;
+  margin: 0 0 var(--spacing-md) 0;
+  /* Clamp to 3 lines so cards stay a uniform height */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.github-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.github-card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.github-card-meta i {
+  font-size: 0.85rem;
+}
+
+.github-card-updated {
+  margin-left: auto;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.github-lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* --- Footer link to full profile ----------------------------- */
+.github-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+.github-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  background: var(--surface-light);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--surface-color);
+  transition: var(--transition-fast);
+}
+
+.github-profile-link:hover {
+  background: var(--gradient-primary);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.3);
+}
+
+.github-profile-link i:last-child {
+  font-size: 0.8rem;
+}
+
+/* --- Responsive --------------------------------------------- */
+@media (max-width: 600px) {
+  .github-section {
+    padding: 60px 0;
+  }
+
+  .github-card-updated {
+    margin-left: 0;
+    width: 100%;
+  }
+}
