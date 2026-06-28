@@ -8,26 +8,23 @@ export const skills = {
     { name: "HTML5", level: 95 },
     { name: "CSS3", level: 90 },
     { name: "Git", level: 80 },
-    { name: "REST APIs", level: 85 }
+    { name: "REST APIs", level: 85 },
+    { name: "WebSocket", level: 65 },
+    { name: "JWT Authentication", level: 70 },
+    { name: "iOS Development", level: 65 },
+    { name: "Android Development", level: 70 }
   ],
   frontend: [
     { name: "React", level: 90 },
-    { name: "Redux", level: 75 },
-    { name: "Vue.js", level: 60 },
-    { name: "Angular", level: 50 },
-    { name: "TypeScript", level: 70 },
-    { name: "SASS/SCSS", level: 85 },
-    { name: "Bootstrap", level: 80 },
-    { name: "Tailwind CSS", level: 75 }
+    { name: "Redux", level: 70 },
+    { name: "HTML5", level: 95 },
+    { name: "CSS3", level: 90 },
+    { name: "JavaScript", level: 85 }
   ],
   backend: [
-    { name: "PHP", level: 85 },
-    { name: "Node.js", level: 70 },
-    { name: "MySQL", level: 80 },
-    { name: "PostgreSQL", level: 65 },
-    { name: "MongoDB", level: 60 },
-    { name: "Laravel", level: 75 },
-    { name: "Express.js", level: 70 },
+    { name: "PHP", level: 90 },
+    { name: "MySQL", level: 90 },
+    { name: "Laravel", level: 70 },
     { name: "API Development", level: 85 }
   ],
   tools: [

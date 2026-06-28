@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 
 const Header = () => {
@@ -9,6 +8,25 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close mobile menu when clicking a link
+  const handleLinkClick = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  // Close mobile menu when scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMenuOpen]);
+
   return (
     <>
       <header className="header">
@@ -17,11 +35,11 @@ const Header = () => {
             <h2>DevPortfolio</h2>
           </div>
           <ul className={isMenuOpen ? 'nav-links active' : 'nav-links'}>
-            <li><Link to="#home">Home</Link></li>
-            <li><Link to="#about">About</Link></li>
-            <li><Link to="#skills">Skills</Link></li>
-            <li><Link to="#projects">Projects</Link></li>
-            <li><Link to="#contact">Contact</Link></li>
+            <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
+            <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+            <li><a href="#skills" onClick={handleLinkClick}>Skills</a></li>
+            <li><a href="#projects" onClick={handleLinkClick}>Projects</a></li>
+            <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
           </ul>
           <div className="mobile-menu-icon" onClick={toggleMenu}>
             <span></span>
@@ -30,6 +48,26 @@ const Header = () => {
           </div>
         </nav>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="mobile-menu-overlay" onClick={toggleMenu}>
+          <div className="mobile-menu">
+            <div className="mobile-menu-close" onClick={toggleMenu}>
+              &times;
+            </div>
+            <nav>
+              <ul>
+                <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
+                <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+                <li><a href="#skills" onClick={handleLinkClick}>Skills</a></li>
+                <li><a href="#projects" onClick={handleLinkClick}>Projects</a></li>
+                <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      )}
     </>
   );
 };

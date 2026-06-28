@@ -1,27 +1,9 @@
-/* App.css - Custom styles for the portfolio application */
+/* App.css - Main application styles */
 
-/* Remove default Create React App styles */
-.App {
-  text-align: left;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+/* Main content area - accounts for fixed header */
+.main-content {
+  padding-top: 70px; /* Same height as header */
+  min-height: calc(100vh - 70px); /* Account for header height */
 }
 
 /* Mobile menu overlay (will be toggled by JavaScript) */
@@ -43,9 +25,9 @@ body {
 }
 
 .mobile-menu {
-  background: white;
-  border-radius: 15px;
-  padding: 30px;
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
   width: 90%;
   max-width: 400px;
   position: relative;
@@ -53,33 +35,40 @@ body {
 
 .mobile-menu-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
   font-size: 1.5rem;
-  color: #34495e;
+  color: var(--text-secondary);
   cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.mobile-menu-close:hover {
+  color: var(--text-primary);
+  transform: rotate(90deg);
 }
 
 .mobile-menu nav ul {
   list-style: none;
-  margin-top: 30px;
+  margin-top: var(--spacing-lg);
 }
 
 .mobile-menu nav ul li {
-  margin: 20px 0;
+  margin: var(--spacing-sm) 0;
 }
 
 .mobile-menu nav ul li a {
   text-decoration: none;
-  font-size: 1.2rem;
-  color: #2c3e50;
-  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 500;
   display: block;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
 }
 
 .mobile-menu nav ul li a:hover {
-  background-color: #ecf0f1;
+  background-color: var(--surface-light);
+  color: var(--text-primary);
 }

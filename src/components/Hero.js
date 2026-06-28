@@ -1,4 +1,5 @@
 import React from 'react';
+import { profile } from '../data/profile';
 import './Hero.css';
 
 const Hero = () => {
@@ -6,8 +7,8 @@ const Hero = () => {
     <section id="home" className="hero">
       <div className="hero-container">
         <div className="hero-content">
-          <h1 className="hero-title">Hi, I'm Alex Developer</h1>
-          <p className="hero-subtitle">Frontend Developer & UI/UX Designer</p>
+          <h1 className="hero-title">Hi, I'm {profile.name}</h1>
+          <p className="hero-subtitle">{profile.title}</p>
           <div className="hero-buttons">
             <a href="#projects" className="btn-primary">View My Work</a>
             <a href="#contact" className="btn-secondary">Get In Touch</a>
