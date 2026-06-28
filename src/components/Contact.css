@@ -1,6 +1,20 @@
 .contact-section {
   padding: var(--spacing-xl) 0;
   background-color: var(--surface-color);
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.08), transparent 55%);
+  pointer-events: none;
+}
+
+.contact-section > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -11,7 +25,7 @@
 
 .section-title {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: var(--spacing-lg);
@@ -22,10 +36,10 @@
 .section-title::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: 80px;
   height: 4px;
   background: var(--gradient-primary);
   border-radius: 2px;

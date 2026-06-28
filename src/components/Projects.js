@@ -6,20 +6,36 @@ const Projects = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <h2 className="section-title">My Projects</h2>
+        <div className="section-title-wrap">
+          <h2 className="section-title">My Projects</h2>
+        </div>
         <div className="projects-grid">
           {projects.map((project) => (
-            <div key={project.id} className="project-card">
+            <div
+              key={project.id}
+              className={`project-card project-card--${project.type}`}
+            >
               <div className="project-image">
-                <img src={project.image} alt={project.title} />
+                <div className="project-image-placeholder" data-project-id={project.id}>
+                  <span className="project-image-label">{project.title}</span>
+                </div>
+                {project.type === 'personal' && (
+                  <span className="project-badge" title="Training / personal project">
+                    <i className="fas fa-user-graduate"></i> Personal
+                  </span>
+                )}
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="project-link">
-                      <i className="fas fa-external-link-alt"></i>
-                    </a>
-                    <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                      <i className="fab fa-github"></i>
-                    </a>
+                    {project.links.live && project.links.live !== '#' && (
+                      <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="Live demo">
+                        <i className="fas fa-external-link-alt"></i>
+                      </a>
+                    )}
+                    {project.links.github && project.links.github !== '#' && (
+                      <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="GitHub">
+                        <i className="fab fa-github"></i>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

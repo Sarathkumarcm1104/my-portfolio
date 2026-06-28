@@ -143,6 +143,13 @@ select {
   padding: 0 var(--spacing-lg);
 }
 
+/* Centered section title block — wraps the inline-block heading so the
+   underline sits truly centered under the text in every section. */
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
 /* Utility Classes */
 .text-center { text-align: center; }
 .text-primary { color: var(--primary-color); }

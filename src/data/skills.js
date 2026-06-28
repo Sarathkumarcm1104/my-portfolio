@@ -1,40 +1,33 @@
-// Skills data organized by category
+// Skills data organized by category.
+// Keys are display labels (used as card titles), values are skill lists.
 export const skills = {
-  technical: [
-    { name: "PHP", level: 85 },
-    { name: "MySQL", level: 80 },
-    { name: "React", level: 90 },
-    { name: "JavaScript", level: 85 },
-    { name: "HTML5", level: 95 },
-    { name: "CSS3", level: 90 },
-    { name: "Git", level: 80 },
-    { name: "REST APIs", level: 85 },
-    { name: "WebSocket", level: 65 },
-    { name: "JWT Authentication", level: 70 },
-    { name: "iOS Development", level: 65 },
-    { name: "Android Development", level: 70 }
+  'Frontend': [
+    { name: 'React', level: 90 },
+    { name: 'Redux', level: 70 },
+    { name: 'Angular', level: 65 },
+    { name: 'JavaScript', level: 85 },
+    { name: 'HTML5', level: 95 },
+    { name: 'CSS3', level: 90 },
   ],
-  frontend: [
-    { name: "React", level: 90 },
-    { name: "Redux", level: 70 },
-    { name: "HTML5", level: 95 },
-    { name: "CSS3", level: 90 },
-    { name: "JavaScript", level: 85 }
+  'Backend': [
+    { name: 'PHP', level: 90 },
+    { name: 'MySQL', level: 90 },
+    { name: 'Laravel', level: 70 },
+    { name: 'REST APIs', level: 85 },
+    { name: 'WebSocket', level: 65 },
   ],
-  backend: [
-    { name: "PHP", level: 90 },
-    { name: "MySQL", level: 90 },
-    { name: "Laravel", level: 70 },
-    { name: "API Development", level: 85 }
+  'Mobile': [
+    { name: 'REST API Integration', level: 85 },
+    { name: 'Third-Party APIs', level: 80 },
+    { name: 'WebSocket / OT', level: 70 },
   ],
-  tools: [
-    { name: "VS Code", level: 90 },
-    { name: "Git/GitHub", level: 85 },
-    { name: "PhpStorm", level: 75 },
-    { name: "Figma", level: 80 },
-    { name: "Adobe Photoshop", level: 70 },
-    { name: "Docker", level: 65 },
-    { name: "Jira", level: 70 },
-    { name: "Postman", level: 75 }
-  ]
+  'Tools': [
+    { name: 'VS Code', level: 90 },
+    { name: 'Git / GitHub', level: 85 },
+    { name: 'PhpStorm', level: 75 },
+    { name: 'Figma', level: 80 },
+    { name: 'Postman', level: 75 },
+    { name: 'Docker', level: 65 },
+    { name: 'Monday', level: 80 },
+  ],
 };
